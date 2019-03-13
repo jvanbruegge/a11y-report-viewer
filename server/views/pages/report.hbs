@@ -1,0 +1,31 @@
+<h1>Report viewer</h1>
+{{#each data}}
+<article class="violations">
+  <h2>{{this.url}}</h2>
+  {{#each this.violations}}
+  <article class="violations__violation">
+    <h3>Issue description</h3>
+    <p>{{this.description}}</p>
+    <h3>Failed standards</h3>
+    <ul>
+      {{#each this.tags}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <h3>Help url</h3>
+    <a href="{{this.helpUrl}}">Get help</a>
+    <h3>Affected nodes</h3>
+    <ul class="violations__nodes">
+      {{#each this.nodes}}
+      <li>
+        <h4>Selector</h4>
+        <p>{{this.target}}</p>
+        <h4>Failure description</h4>
+        <p>{{this.failureSummary}}</p>
+      </li>
+      {{/each}}
+    </ul>
+  </article>
+  {{/each}}
+</article>
+{{/each}}
