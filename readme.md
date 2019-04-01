@@ -1,20 +1,29 @@
 # Testing area
 
-## Generate the parsed report and run the server
+## Generate a report
 
-`sh ./run.sh`
--> go to `localhost:3000`
+This requires the `accessible-pipeline` module. This can be installed via `npm i -g accessible-pipeline`.
+
+Run the following:
+
+```sh
+  DEBUG_LOG_PRETTY=true accessible-pipeline run <your sites base url including protocol here> --ci
+```
+
+This generates a json report and state file, the report is what you will upload into the viewer.
 
 ## Upload
 
-upload the `report.json` file that was generated using the file input and click submit
+Run the app by running `npm run start`. This will spin up a server on port `process.env.PORT` in production and `3000` locally.
 
-## Magic
+upload the `report.json` file using the file input and click submit and you will see your report overview.
 
-View your report :)!
+## Upcoming features
+
+- Base url input functionality so no manual report generation is required
+- Error messages for upload and processing issues
+- Frontend work
 
 ## Notes
 
-its not perfect but it works and can be tidied. I have a designer helping me mock up a proper flow for this but yeah, so far so good.
-
-Let me know your thoughts. Cheers.
+It's not perfect but it works and can be tidied later. I have a designer helping me mock up a proper flow for this. Any issues or ideas, please comment them in the repo in the issues tab.
