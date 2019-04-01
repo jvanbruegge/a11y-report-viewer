@@ -1,0 +1,23 @@
+body {
+  max-width: 75ch;
+  padding: 24px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 18.75px;
+}
+
+.violations {
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid black;
+}
+
+.violations__violation:not(:last-child) {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid black;
+}
+
+.violations__nodes li:not(:first-child) {
+  border-top: 1px solid black;
+}

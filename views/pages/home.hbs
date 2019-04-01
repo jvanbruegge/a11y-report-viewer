@@ -1,0 +1,14 @@
+<form action="/scan" method="post" encType="multipart/form-data">
+  <label for="url">
+    Enter website base url
+  </label>
+  <input id="url" type="url" name="scan_url" />
+  <input type="submit" value="Scan!" />
+</form>
+<form action="/upload" method="post" encType="multipart/form-data">
+  <label for="report">
+    Upload an existing report
+  </label>
+  <input id="report" type="file" name="report" />
+  <input type="submit" value="Upload!" />
+</form>
